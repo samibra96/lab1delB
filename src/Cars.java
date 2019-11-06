@@ -1,6 +1,8 @@
+package src;
+
 import java.awt.*;
 
-public class Cars {
+public abstract class Cars {
 
 
     private int nrDoors; // Number of doors on the car
