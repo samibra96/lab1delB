@@ -8,11 +8,11 @@ public class Saab95 extends Cars {
         super(2, Color.red, 125, 0, "src.Saab95");
     }
 
-    public void setTurboOn(){
+    private void setTurboOn() {
         turboOn = true;
     }
 
-    public void setTurboOff(){
+    private void setTurboOff() {
         turboOn = false;
     }
 
@@ -31,12 +31,12 @@ public class Saab95 extends Cars {
     }
 
     // TODO fix this method according to lab pm
-    public void gas(double amount){
+    private void gas(double amount) {
         incrementSpeed(amount);
     }
 
     // TODO fix this method according to lab pm
-    public void brake(double amount){
+    private void brake(double amount) {
         decrementSpeed(amount);
     }
 }

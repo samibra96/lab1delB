@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public abstract class Cars {
+public abstract class Cars implements Movable {
 
 
     private int nrDoors; // Number of doors on the car
@@ -8,6 +8,10 @@ public abstract class Cars {
     private double currentSpeed; // The current speed of the car
     private Color color; // Color of the car
     private String modelName; // The car model name
+    private double x;
+    private double y;
+    private double angle;
+
 
 
     public Cars(int nrDoors, Color color, double enginePower, double currentSpeed, String modelName) {
@@ -19,23 +23,36 @@ public abstract class Cars {
         startEngine();
     }
 
+    public void move() {
+        y = y + Math.cos(angle) * Math.abs(Math.cos(angle)) * currentSpeed;
+        x = x + Math.sin(angle) * Math.abs(Math.sin(angle)) * currentSpeed;
+    }
+
+    public void turnLeft() {
+        angle = angle + 0.1;
+    }
+
+    public void turnRight() {
+        angle = angle - 0.1;
+    }
+
     public void setCurrentSpeed(double currentSpeed) {
         this.currentSpeed = currentSpeed;
     }
 
-    public void startEngine(){
+    private void startEngine() {
         currentSpeed = 0.1;
     }
 
-    public void setEnginePower(double enginePower){
+    private void setEnginePower(double enginePower) {
         this.enginePower = enginePower;
     }
 
-    public void stopEngine(){
+    private void stopEngine() {
         currentSpeed = 0.0;
     }
 
-    public int getNrDoors() {
+    private int getNrDoors() {
         return nrDoors;
     }
 
