@@ -1,7 +1,3 @@
-package src;
-
-import src.Cars;
-
 import java.awt.*;
 
 public class Saab95 extends Cars {

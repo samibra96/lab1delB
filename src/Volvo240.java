@@ -1,7 +1,3 @@
-package src;
-
-import src.Cars;
-
 import java.awt.*;
 
 public class Volvo240 extends Cars {
