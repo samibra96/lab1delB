@@ -35,29 +35,34 @@ public abstract class Cars implements Movable {
         startEngine();
     }
     /**
-     * Move makes car move in x and y direction depending on angle.
+     * move() makes car move in x and y direction depending on angle and cos/sin functions.
+     * + on Y makes car move downwards. IE the unit circle is upside down.
      */
     public void move() {
-        y = y + Math.cos(angle) * Math.abs(Math.cos(angle)) * currentSpeed;
-        x = x + Math.sin(angle) * Math.abs(Math.sin(angle)) * currentSpeed;
+        x = x + Math.cos(angle) * Math.abs(Math.cos(angle)) * currentSpeed;
+        y = y + Math.sin(angle) * Math.abs(Math.sin(angle)) * currentSpeed;
     }
     /**
-     * Makes car turn left by increasing angle with 0.1
+     * Makes car turn left by decreasing angle with 0.1
      */
     public void turnLeft() {
-        angle = angle + 0.1;
+        angle = angle - 0.1;
     }
 
     /**
-     * Makes car turn right by decreasing angle with 0.1
+     * Makes car turn right by increasing angle with 0.1
      */
     public void turnRight() {
-        angle = angle - 0.1;
+        angle = angle + 0.1;
     }
 
     public void setCurrentSpeed(double currentSpeed) {
         this.currentSpeed = currentSpeed;
     }
+
+    abstract void decrementSpeed(double amount);
+
+    abstract void incrementSpeed(double amount);
 
     /**
      * starts engine by setting currentSpeed to 0.1
@@ -95,4 +100,52 @@ public abstract class Cars implements Movable {
     public String getModelName() {
         return modelName;
     }
+
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public double getAngle() {
+        return angle;
+    }
+
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
+    public void setAngle(double angle) {
+        this.angle = angle;
+    }
+
+
+    /**
+     * TODO
+     * @param amount TODO
+     */
+    // TODO fix this method according to lab pm
+    private void gas(double amount) {
+        if(amount>=0 && amount <=1.0){
+            incrementSpeed(amount);
+        }
+    }
+
+    /**
+     * TODO
+     * @param amount TODO
+     */
+    // TODO fix this method according to lab pm
+    private void brake(double amount){
+        if(amount >= 0 && amount <=1){
+            decrementSpeed(amount);
+        }
+    }
+
 }

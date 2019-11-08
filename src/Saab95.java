@@ -13,8 +13,8 @@ public class Saab95 extends Cars {
     /**
      * constructor, sets value to declare instances of class.
      */
-    public Saab95(){
-        super(2, Color.red, 125, 0, "src.Saab95");
+    public Saab95() {
+        super(2, Color.red, 125, 0, "Saab95");
     }
 
     private void setTurboOn() {
@@ -27,45 +27,33 @@ public class Saab95 extends Cars {
 
     /**
      * calculates speedFactor for a Saab95.
+     *
      * @return returns a double speedFactor that are used to increase & decrease speed.
      */
-    private double speedFactor(){
+    private double speedFactor() {
         double turbo = 1;
-        if(turboOn) turbo = 1.3;
+        if (turboOn) turbo = 1.3;
         return getEnginePower() * 0.01 * turbo;
     }
 
     /**
      * Increments speed and sets the currentSpeed value.
+     *
      * @param amount TODO
      */
-    public void incrementSpeed(double amount){
-        setCurrentSpeed(getCurrentSpeed() + speedFactor() * amount);
+
+    public void incrementSpeed(double amount) {
+        setCurrentSpeed(Math.min(getCurrentSpeed() + speedFactor() * amount, getEnginePower()));
     }
 
     /**
      * Decrement speed and sets the currentSpeed value.
+     *
      * @param amount TODO
      */
-    public void decrementSpeed(double amount){
-        setCurrentSpeed(getCurrentSpeed() - speedFactor() * amount);
+
+    public void decrementSpeed(double amount) {
+        setCurrentSpeed(Math.max(getCurrentSpeed() - speedFactor() * amount,0));
     }
 
-    /**
-     * TODO
-     * @param amount TODO
-     */
-    // TODO fix this method according to lab pm
-    private void gas(double amount) {
-        incrementSpeed(amount);
-    }
-
-    /**
-     * TODO
-     * @param amount TODO
-     */
-    // TODO fix this method according to lab pm
-    private void brake(double amount) {
-        decrementSpeed(amount);
-    }
 }

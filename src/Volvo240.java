@@ -14,7 +14,7 @@ public class Volvo240 extends Cars {
      * @param trimFactor Instance variable used to calculate the speedFactor for a Volvo240.
      */
     public Volvo240(double trimFactor){
-        super(4, Color.black, 100, 0, "src.Volvo240");
+        super(4, Color.black, 100, 0, "Volvo240");
     }
 
     /**
@@ -29,7 +29,8 @@ public class Volvo240 extends Cars {
      * Increases and sets currentSpeed.
      * @param amount TODO
      */
-    private void incrementSpeed(double amount) {
+
+    public void incrementSpeed(double amount) {
         setCurrentSpeed(Math.min(getCurrentSpeed() + speedFactor() * amount, getEnginePower()));
     }
 
@@ -37,25 +38,9 @@ public class Volvo240 extends Cars {
      * Decrease and sets currentSpeed.
      * @param amount TODO
      */
-    private void decrementSpeed(double amount) {
+
+    public void decrementSpeed(double amount) {
         setCurrentSpeed(Math.max(getCurrentSpeed() - speedFactor() * amount,0));
     }
 
-    /**
-     * TODO
-     * @param amount TODO
-     */
-    // TODO fix this method according to lab pm
-    private void gas(double amount) {
-        incrementSpeed(amount);
-    }       //TODO not private?
-
-    /**
-     * TODO
-     * @param amount TODO
-     */
-    // TODO fix this method according to lab pm
-    private void brake(double amount) {
-        decrementSpeed(amount);
-    }       //TODO not private?
 }
