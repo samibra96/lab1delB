@@ -12,6 +12,6 @@ public class testTurnRight {
         volvoCar.setX(0);
         volvoCar.setY(0);
         volvoCar.turnRight();
-        assertTrue(Double.compare(volvoCar.getAngle(), 0.1) == 0);
+        assertEquals(0, volvoCar.getAngle(), 0.1);
     }
 }

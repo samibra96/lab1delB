@@ -12,7 +12,7 @@ public class testMove {
     saabCar.setY(5);
     saabCar.setAngle(0);
     saabCar.move();
-    assertTrue(Double.compare(saabCar.getX(), 5.1) == 0);
+    assertEquals(0, saabCar.getX(), 5.1);
     }
     @Test
     public void testMoveY(){
@@ -22,7 +22,7 @@ public class testMove {
         saabCar.setY(5);
         saabCar.setAngle(Math.PI/2);
         saabCar.move();
-        assertTrue(Double.compare(saabCar.getY(), 5.1) == 0);
+        assertEquals(0, saabCar.getY(), 5.1);
     }
 
     @Test
@@ -33,7 +33,8 @@ public class testMove {
         saabCar.setY(5);
         saabCar.setAngle(Math.PI/4);
         saabCar.move();
-        assertTrue(Double.compare(saabCar.getX(), 5.05) == 0 && Double.compare(saabCar.getY(),5.05) == 0);
+        assertEquals(0,saabCar.getX(),5.05);
+        assertEquals(0,saabCar.getY(),5.05);
     }
 
     @Test
@@ -44,7 +45,9 @@ public class testMove {
         saabCar.setY(5);
         saabCar.setAngle(-Math.PI/4);
         saabCar.move();
-        assertTrue(Double.compare(saabCar.getX(), 5.05) == 0 && Double.compare(saabCar.getY(),4.95) == 0);
+        assertEquals(0,saabCar.getX(),5.05);
+        assertEquals(0,saabCar.getY(),4.95);
+
     }
 
     @Test
@@ -55,7 +58,9 @@ public class testMove {
         saabCar.setY(5);
         saabCar.setAngle(10*Math.PI/2);
         saabCar.move();
-        assertTrue(Double.compare(saabCar.getX(), 4.90) == 0 && Double.compare(saabCar.getY(),5.00) == 0);
+        assertEquals(0,saabCar.getX(),4.90);
+        assertEquals(0,saabCar.getY(),5.00);
+
     }
 
 }
