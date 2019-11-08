@@ -27,18 +27,16 @@ public class Volvo240 extends Cars {
 
     /**
      * Increases and sets currentSpeed.
-     * @param amount TODO
+     * @param amount user input
      */
-
     public void incrementSpeed(double amount) {
         setCurrentSpeed(Math.min(getCurrentSpeed() + speedFactor() * amount, getEnginePower()));
     }
 
     /**
      * Decrease and sets currentSpeed.
-     * @param amount TODO
+     * @param amount user input
      */
-
     public void decrementSpeed(double amount) {
         setCurrentSpeed(Math.max(getCurrentSpeed() - speedFactor() * amount,0));
     }

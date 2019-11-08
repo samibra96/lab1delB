@@ -39,9 +39,8 @@ public class Saab95 extends Cars {
     /**
      * Increments speed and sets the currentSpeed value.
      *
-     * @param amount TODO
+     * @param amount user input
      */
-
     public void incrementSpeed(double amount) {
         setCurrentSpeed(Math.min(getCurrentSpeed() + speedFactor() * amount, getEnginePower()));
     }
@@ -49,9 +48,8 @@ public class Saab95 extends Cars {
     /**
      * Decrement speed and sets the currentSpeed value.
      *
-     * @param amount TODO
+     * @param amount user input
      */
-
     public void decrementSpeed(double amount) {
         setCurrentSpeed(Math.max(getCurrentSpeed() - speedFactor() * amount,0));
     }
