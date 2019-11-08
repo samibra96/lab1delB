@@ -130,7 +130,7 @@ public abstract class Cars implements Movable {
      * Calls incrementSpeed to increase currentSpeed.
      * @param amount user input
      */
-    private void gas(double amount) {
+    public void gas(double amount) {
         if(amount>=0 && amount <=1.0){
             incrementSpeed(amount);
         }
@@ -140,7 +140,7 @@ public abstract class Cars implements Movable {
      * Class decrementSpeed do decrease currentSpeed.
      * @param amount user input
      */
-    private void brake(double amount){
+    public void brake(double amount){
         if(amount >= 0 && amount <=1){
             decrementSpeed(amount);
         }
