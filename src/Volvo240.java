@@ -11,9 +11,8 @@ public class Volvo240 extends Cars {
 
     /**
      * constructor for a Volvo240
-     * @param trimFactor Instance variable used to calculate the speedFactor for a Volvo240.
      */
-    public Volvo240(double trimFactor){
+    public Volvo240(){
         super(4, Color.black, 100, 0, "Volvo240");
     }
 

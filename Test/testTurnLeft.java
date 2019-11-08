@@ -6,7 +6,7 @@ public class testTurnLeft {
     @Test
     public void testTurnLeft(){
         System.out.println("Testing method turnLeft");
-        Volvo240 volvoCar = new Volvo240(1.0);
+        Volvo240 volvoCar = new Volvo240();
         volvoCar.setAngle(0);
         volvoCar.setX(0);
         volvoCar.setY(0);
