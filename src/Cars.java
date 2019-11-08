@@ -1,6 +1,6 @@
 import java.awt.*;
 /**
- * abstract class as Saab95 & Volvo240 extends
+ * abstract class as Saab95 and Volvo240 extends
  */
 public abstract class Cars implements Movable {
 
@@ -35,7 +35,7 @@ public abstract class Cars implements Movable {
         startEngine();
     }
     /**
-     * Move makes car move in x & y direction depending on angle.
+     * Move makes car move in x and y direction depending on angle.
      */
     public void move() {
         y = y + Math.cos(angle) * Math.abs(Math.cos(angle)) * currentSpeed;
