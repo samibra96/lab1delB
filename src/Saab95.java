@@ -1,12 +1,15 @@
 import java.awt.*;
+
 /**
  * Class Saab95 is through extension a subclass to the abstract class Cars
  */
 public class Saab95 extends Cars {
+
     /**
      * instance variable to turn turboOn on Saab95.
      */
     private boolean turboOn;
+
     /**
      * constructor, sets value to declare instances of class.
      */
@@ -31,6 +34,7 @@ public class Saab95 extends Cars {
         if(turboOn) turbo = 1.3;
         return getEnginePower() * 0.01 * turbo;
     }
+
     /**
      * Increments speed and sets the currentSpeed value.
      * @param amount TODO
@@ -46,6 +50,7 @@ public class Saab95 extends Cars {
     public void decrementSpeed(double amount){
         setCurrentSpeed(getCurrentSpeed() - speedFactor() * amount);
     }
+
     /**
      * TODO
      * @param amount TODO
@@ -54,6 +59,7 @@ public class Saab95 extends Cars {
     private void gas(double amount) {
         incrementSpeed(amount);
     }
+
     /**
      * TODO
      * @param amount TODO
