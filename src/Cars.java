@@ -43,17 +43,17 @@ public abstract class Cars implements Movable {
         y = y + Math.sin(angle) * Math.abs(Math.sin(angle)) * currentSpeed;
     }
     /**
-     * Makes car turn left by decreasing angle with 0.1
+     * Makes car turn left by decreasing angle with PI/16
      */
     public void turnLeft() {
-        angle = angle - 0.1;
+        angle = angle - Math.PI/16;
     }
 
     /**
-     * Makes car turn right by increasing angle with 0.1
+     * Makes car turn right by increasing angle with PI/16
      */
     public void turnRight() {
-        angle = angle + 0.1;
+        angle = angle + Math.PI/16;
     }
 
     public void setCurrentSpeed(double currentSpeed) {
