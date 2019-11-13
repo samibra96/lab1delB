@@ -30,28 +30,10 @@ public class Saab95 extends Cars {
      *
      * @return returns a double speedFactor that are used to increase & decrease speed.
      */
-    private double speedFactor() {
+
+    double speedFactor() {
         double turbo = 1;
         if (turboOn) turbo = 1.3;
         return getEnginePower() * 0.01 * turbo;
     }
-
-    /**
-     * Increments speed and sets the currentSpeed value.
-     *
-     * @param amount user input
-     */
-    public void incrementSpeed(double amount) {
-        setCurrentSpeed(Math.min(getCurrentSpeed() + speedFactor() * amount, getEnginePower()));
-    }
-
-    /**
-     * Decrement speed and sets the currentSpeed value.
-     *
-     * @param amount user input
-     */
-    public void decrementSpeed(double amount) {
-        setCurrentSpeed(Math.max(getCurrentSpeed() - speedFactor() * amount,0));
-    }
-
 }

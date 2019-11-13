@@ -60,9 +60,27 @@ public abstract class Cars implements Movable {
         this.currentSpeed = currentSpeed;
     }
 
-    abstract void decrementSpeed(double amount);
+    /**
+     * Abstract method have to implement in any class that extends this one.
+     * @return value to multiply incrementSpeed and decrementSpeed by.
+     */
+    abstract double speedFactor();
 
-    abstract void incrementSpeed(double amount);
+    /**
+     * Increases and sets currentSpeed.
+     * @param amount user input
+     */
+    private void incrementSpeed(double amount) {
+        setCurrentSpeed(Math.min(getCurrentSpeed() + speedFactor() * amount, getEnginePower()));
+    }
+
+    /**
+     * Decrease and sets currentSpeed.
+     * @param amount user input
+     */
+    private void decrementSpeed(double amount) {
+        setCurrentSpeed(Math.max(getCurrentSpeed() - speedFactor() * amount,0));
+    }
 
     /**
      * starts engine by setting currentSpeed to 0.1
@@ -124,6 +142,8 @@ public abstract class Cars implements Movable {
     public void setAngle(double angle) {
         this.angle = angle;
     }
+
+
 
 
     /**
