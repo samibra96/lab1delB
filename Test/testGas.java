@@ -10,7 +10,7 @@ public class testGas {
         mySaab.setCurrentSpeed(10);
         mySaab.setTurboOff();
         mySaab.gas(0.5);
-        assertEquals(0, mySaab.getCurrentSpeed(), 10.8125);
+        assertEquals(10.625, mySaab.getCurrentSpeed(), 0.01);
     }
 
     @Test
@@ -19,7 +19,7 @@ public class testGas {
         mySaab.setCurrentSpeed(10);
         mySaab.setTurboOn();
         mySaab.gas(1.1);
-        assertEquals(0, mySaab.getCurrentSpeed(), 10);
+        assertEquals(10, mySaab.getCurrentSpeed(), 0.01);
     }
 
     @Test
@@ -28,7 +28,7 @@ public class testGas {
         mySaab.setCurrentSpeed(10);
         mySaab.setTurboOn();
         mySaab.gas(-0.1);
-        assertEquals(0, mySaab.getCurrentSpeed(), 10);
+        assertEquals(10, mySaab.getCurrentSpeed(), 0.01);
     }
 
     @Test
@@ -37,7 +37,7 @@ public class testGas {
         mySaab.setCurrentSpeed(10);
         mySaab.setTurboOn();
         mySaab.gas(1);
-        assertEquals(0, mySaab.getCurrentSpeed(), 11.625);
+        assertEquals(11.625, mySaab.getCurrentSpeed(), 0.01);
     }
 
     @Test
@@ -46,7 +46,7 @@ public class testGas {
         mySaab.setCurrentSpeed(10);
         mySaab.setTurboOn();
         mySaab.gas(0);
-        assertEquals(0, mySaab.getCurrentSpeed(), 10);
+        assertEquals(10, mySaab.getCurrentSpeed(), 0.01);
     }
 
 

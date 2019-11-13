@@ -3,7 +3,7 @@ import org.junit.*;
 import static org.junit.Assert.* ;
 
 public class SaabTestIncSpeed {
-    @Test
+  /*  @Test
     public void saabTestIncSpeedTurboON(){
         System.out.println("Testing method decrementSpeed in Saab95 class");
         Saab95 mySaab = new Saab95();
@@ -31,6 +31,6 @@ public class SaabTestIncSpeed {
         mySaab.incrementSpeed(1);
         assertEquals(0, Double.compare(mySaab.getCurrentSpeed(), 125));
     }
-
+*/
 
 }

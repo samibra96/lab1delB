@@ -4,7 +4,7 @@ import static org.junit.Assert.* ;
 
 public class SaabTestDecSpeed {
 
-
+/*
     @Test
     public void saabTestDspeedTurboOn(){
         System.out.println("Testing method decrementSpeed in Saab95 class");
@@ -35,4 +35,6 @@ public class SaabTestDecSpeed {
     }
 
 
+
+*/
 }

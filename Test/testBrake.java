@@ -10,7 +10,7 @@ public class testBrake {
         Volvo240 myVolvo = new Volvo240();
         myVolvo.setCurrentSpeed(10);
         myVolvo.brake(0.75);
-        assertEquals(0, myVolvo.getCurrentSpeed(), 9.0625);
+        assertEquals(9.0625, myVolvo.getCurrentSpeed(), 0.01);
     }
 
     @Test
@@ -19,7 +19,7 @@ public class testBrake {
         Volvo240 myVolvo = new Volvo240();
         myVolvo.setCurrentSpeed(0);
         myVolvo.brake(0.25);
-        assertEquals(0, myVolvo.getCurrentSpeed(), 0);
+        assertEquals(0, myVolvo.getCurrentSpeed(), 0.01);
     }
 
     @Test
@@ -28,7 +28,7 @@ public class testBrake {
         Volvo240 myVolvo = new Volvo240();
         myVolvo.setCurrentSpeed(10);
         myVolvo.brake(-1);
-        assertEquals(0, myVolvo.getCurrentSpeed(), 10);
+        assertEquals(10, myVolvo.getCurrentSpeed(), 0.01);
     }
 
 }
