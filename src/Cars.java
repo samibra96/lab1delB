@@ -1,6 +1,6 @@
 import java.awt.*;
 /**
- * abstract class as Saab95 and Volvo240 extends
+ * Abstract class that Saab95 and Volvo240 extends
  */
 public abstract class Cars implements Movable {
 
@@ -24,6 +24,7 @@ public abstract class Cars implements Movable {
      * @param enginePower Engine power of the car
      * @param currentSpeed The current speed of the car
      * @param modelName The car model name
+     * @param angle The direction the car is pointed towards
      */
     public Cars(int nrDoors, Color color, double enginePower, double currentSpeed, String modelName, double angle) {
         this.nrDoors = nrDoors;
