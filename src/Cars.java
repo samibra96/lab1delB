@@ -46,14 +46,14 @@ public abstract class Cars implements Movable {
     }
 
     /**
-     * Makes car turn left by decreasing angle with PI/16
+     * Makes car turn left by decreasing angle with &pi;/16
      */
     public void turnLeft() {
         angle = angle - Math.PI/16;
     }
 
     /**
-     * Makes car turn right by increasing angle with PI/16
+     * Makes car turn right by increasing angle with &pi;/16
      */
     public void turnRight() {
         angle = angle + Math.PI/16;
