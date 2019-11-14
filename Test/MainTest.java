@@ -26,7 +26,7 @@ public class MainTest {
 
     }
 
-    public void printCar(Cars car){
+    private void printCar(Cars car){
         System.out.println("Car is a " + car.getModelName() + " X: " + car.getX() + " Y: " + car.getY());
     }
 
