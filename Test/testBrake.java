@@ -8,16 +8,15 @@ public class testBrake {
     public void testBrake() {
         System.out.println("test of method brake()");
         Volvo240 myVolvo = new Volvo240();
-        myVolvo.setCurrentSpeed(10);
+        //myVolvo.setCurrentSpeed(10);
         myVolvo.brake(0.75);
-        assertEquals(9.0625, myVolvo.getCurrentSpeed(), 0.01);
+        assertEquals(0, myVolvo.getCurrentSpeed(), 0.01);
     }
 
     @Test
     public void testBreakMinValue() {
         System.out.println("test of method brake()");
         Volvo240 myVolvo = new Volvo240();
-        myVolvo.setCurrentSpeed(0);
         myVolvo.brake(0.25);
         assertEquals(0, myVolvo.getCurrentSpeed(), 0.01);
     }
@@ -26,9 +25,9 @@ public class testBrake {
     public void testBreakBadInput() {
         System.out.println("test of method brake()");
         Volvo240 myVolvo = new Volvo240();
-        myVolvo.setCurrentSpeed(10);
+        //myVolvo.setCurrentSpeed(10);
         myVolvo.brake(-1);
-        assertEquals(10, myVolvo.getCurrentSpeed(), 0.01);
+        assertEquals(0.1, myVolvo.getCurrentSpeed(), 0.01);
     }
 
 }

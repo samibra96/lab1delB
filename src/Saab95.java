@@ -12,19 +12,31 @@ public class Saab95 extends Cars {
 
     /**
      * constructor, sets value to declare instances of class.
+     * if no param set angle to default 0.
      */
     public Saab95(){
         this(0);
     }
 
+    /**
+     * Constructor, sets value to declare instances of class.
+     *
+     * @param angle The direction the car points at when created.
+     */
     public Saab95(double angle) {
         super(2, Color.red, 125, 0, "Saab95",angle);
     }
 
+    /**
+     * Activate turbo by setting instance variable to true
+     */
     public void setTurboOn() {
         turboOn = true;
     }
 
+    /**
+     * Deactivate turbo by setting instance variable to false.
+     */
     public void setTurboOff() {
         turboOn = false;
     }
@@ -34,7 +46,6 @@ public class Saab95 extends Cars {
      *
      * @return returns a double speedFactor that are used to increase & decrease speed.
      */
-
     double speedFactor() {
         double turbo = 1;
         if (turboOn) turbo = 1.3;

@@ -7,46 +7,46 @@ public class testGas {
     @Test
     public void testGas(){
         Saab95 mySaab = new Saab95();
-        mySaab.setCurrentSpeed(10);
+        //mySaab.setCurrentSpeed(10);
         mySaab.setTurboOff();
         mySaab.gas(0.5);
-        assertEquals(10.625, mySaab.getCurrentSpeed(), 0.01);
+        assertEquals(0.725, mySaab.getCurrentSpeed(), 0.01);
     }
 
     @Test
     public void testGasOver(){
         Saab95 mySaab = new Saab95();
-        mySaab.setCurrentSpeed(10);
+        //mySaab.setCurrentSpeed(10);
         mySaab.setTurboOn();
         mySaab.gas(1.1);
-        assertEquals(10, mySaab.getCurrentSpeed(), 0.01);
+        assertEquals(0.1, mySaab.getCurrentSpeed(), 0.01);
     }
 
     @Test
     public void testGasUnder(){
         Saab95 mySaab = new Saab95();
-        mySaab.setCurrentSpeed(10);
+        //mySaab.setCurrentSpeed(10);
         mySaab.setTurboOn();
         mySaab.gas(-0.1);
-        assertEquals(10, mySaab.getCurrentSpeed(), 0.01);
+        assertEquals(0.1, mySaab.getCurrentSpeed(), 0.01);
     }
 
     @Test
     public void testGas1(){
         Saab95 mySaab = new Saab95();
-        mySaab.setCurrentSpeed(10);
+        //mySaab.setCurrentSpeed(10);
         mySaab.setTurboOn();
         mySaab.gas(1);
-        assertEquals(11.625, mySaab.getCurrentSpeed(), 0.01);
+        assertEquals(1.725, mySaab.getCurrentSpeed(), 0.01);
     }
 
     @Test
     public void testGas0(){
         Saab95 mySaab = new Saab95();
-        mySaab.setCurrentSpeed(10);
+        //mySaab.setCurrentSpeed(10);
         mySaab.setTurboOn();
         mySaab.gas(0);
-        assertEquals(10, mySaab.getCurrentSpeed(), 0.01);
+        assertEquals(0.1, mySaab.getCurrentSpeed(), 0.01);
     }
 
 

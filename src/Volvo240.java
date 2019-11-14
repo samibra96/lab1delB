@@ -1,4 +1,5 @@
 import java.awt.*;
+
 /**
  * Class Volvo240 is through extension a subclass to the abstract class Cars
  */
@@ -10,12 +11,17 @@ public class Volvo240 extends Cars {
     private final static double trimFactor = 1.25;
 
     /**
-     * constructor for a Volvo240
+     * constructor, sets value to declare instances of class.
+     * if no param set angle to default 0.
      */
-
     public Volvo240(){
         this(0);
     }
+
+    /**
+     * Constructor, sets value to declare instances of class.
+     * @param angle The direction the car points at when created.
+     */
     public Volvo240(double angle){
         super(4, Color.black, 100, 0, "Volvo240", angle);
     }
