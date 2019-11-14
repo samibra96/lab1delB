@@ -13,8 +13,12 @@ public class Saab95 extends Cars {
     /**
      * constructor, sets value to declare instances of class.
      */
-    public Saab95() {
-        super(2, Color.red, 125, 0, "Saab95");
+    public Saab95(){
+        this(0);
+    }
+
+    public Saab95(double angle) {
+        super(2, Color.red, 125, 0, "Saab95",angle);
     }
 
     public void setTurboOn() {

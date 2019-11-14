@@ -26,12 +26,13 @@ public abstract class Cars implements Movable {
      * @param currentSpeed The current speed of the car
      * @param modelName The car model name
      */
-    public Cars(int nrDoors, Color color, double enginePower, double currentSpeed, String modelName) {
+    public Cars(int nrDoors, Color color, double enginePower, double currentSpeed, String modelName, double angle) {
         this.nrDoors = nrDoors;
         this.color = color;
         this.enginePower = enginePower;
         this.currentSpeed = currentSpeed;
         this.modelName = modelName;
+        this.angle = angle;
         startEngine();
     }
     /**

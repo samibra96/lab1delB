@@ -7,9 +7,9 @@ public class testTurnLeft {
     public void testTurnLeft(){
         System.out.println("Testing method turnLeft");
         Volvo240 volvoCar = new Volvo240();
-        volvoCar.setAngle(0);
-        volvoCar.setX(0);
-        volvoCar.setY(0);
+        //volvoCar.setAngle(0);
+        //volvoCar.setX(0);
+        //volvoCar.setY(0);
         volvoCar.turnLeft();
         assertEquals(-Math.PI/16, volvoCar.getAngle(), 0.01);
     }
