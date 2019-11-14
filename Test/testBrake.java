@@ -17,8 +17,9 @@ public class testBrake {
     public void testBreakMinValue() {
         System.out.println("test of method brake()");
         Volvo240 myVolvo = new Volvo240();
-        myVolvo.brake(0.25);
-        assertEquals(0, myVolvo.getCurrentSpeed(), 0.01);
+        myVolvo.gas(1); //currentSpeed 1.35
+        myVolvo.brake(0.25); //0,3125
+        assertEquals(1.0375, myVolvo.getCurrentSpeed(), 0.01);
     }
 
     @Test
