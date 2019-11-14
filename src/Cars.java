@@ -131,15 +131,15 @@ public abstract class Cars implements Movable {
         return angle;
     }
 
-    public void setX(double x) {
+    private void setX(double x) {
         this.x = x;
     }
 
-    public void setY(double y) {
+    private void setY(double y) {
         this.y = y;
     }
 
-    public void setAngle(double angle) {
+    private void setAngle(double angle) {
         this.angle = angle;
     }
 
