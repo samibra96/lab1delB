@@ -107,7 +107,7 @@ public abstract class Cars implements Movable {
         currentSpeed = 0.0;
     }
 
-    private int getNrDoors() {
+    public int getNrDoors() {
         return nrDoors;
     }
 
@@ -150,8 +150,6 @@ public abstract class Cars implements Movable {
     private void setAngle(double angle) {
         this.angle = angle;
     }
-
-
 
 
     /**
