@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class Truck extends Cars implements Movable, ITransport {
+public abstract class Truck extends Cars implements Movable, ITransport {
 
 
     private double flatbedAngle;
@@ -28,27 +28,19 @@ public class Truck extends Cars implements Movable, ITransport {
     }
 
     @Override
-    double speedFactor() {
-        return 0;
-    }
-
-    @Override
-    public void liftFlatbed() {
-
-    }
-
-    @Override
-    public void lowerFlatbed() {
-
-    }
-
-    @Override
     public void loadCargo() {
 
     }
 
     @Override
     public void unloadCargo() {
+    }
 
+    public double getFlatbedAngle() {
+        return flatbedAngle;
+    }
+
+    public void setFlatbedAngle(double flatbedAngle) {
+        this.flatbedAngle = flatbedAngle;
     }
 }
