@@ -3,7 +3,7 @@ import java.awt.*;
 /**
  *  Scania is a Truck
  */
-public class Scania extends Truck implements ITransport{
+public class Scania extends Truck implements Movable{
 
     /**
      * instance variable used to calculate speedFactor of a Scania.
@@ -44,9 +44,9 @@ public class Scania extends Truck implements ITransport{
      * Increases angle of flatbed
      */
 
-    public void liftFlatbed() {
+    public void liftFlatbed() {     //TODO combine common method with CarTransport
         if(Double.compare(getCurrentSpeed(),0) == 0) {
-            setFlatbedAngle(Math.min(getFlatbedAngle() + 0.1, 70));
+            setRampAngle(Math.min(getRampAngle() + 0.1, 70));
         }
     }
 
@@ -54,17 +54,10 @@ public class Scania extends Truck implements ITransport{
      * Decreases angle of flatbed
      */
 
-    public void lowerFlatbed() {
-        setFlatbedAngle(Math.max(getFlatbedAngle()-0.1 , 0));
+    public void lowerFlatbed() {        //TODO combine common method with CarTransport
+        if(Double.compare(getCurrentSpeed(),0) == 0) {
+            setRampAngle((Math.max(getRampAngle() - 0.1, 0)));
+        }
     }
 
-    @Override
-    public void loadCargo() {
-
-    }
-
-    @Override
-    public void unloadCargo() {
-
-    }
 }

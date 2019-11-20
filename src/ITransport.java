@@ -2,7 +2,7 @@ import java.awt.*;
 
 public interface ITransport {
 
-    void loadCargo();
+    void loadCargo(Cars car);       //TODO Make abstract
 
     void unloadCargo();
 

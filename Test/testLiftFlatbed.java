@@ -6,16 +6,16 @@ public class testLiftFlatbed {
     @Test
     public void testLiftFlatbed(){
         Scania myScania = new Scania();
-        myScania.setFlatbedAngle(10);
+        myScania.setRampAngle(10);
         myScania.setCurrentSpeed(0);
         myScania.liftFlatbed();
-        assertEquals(10.1, myScania.getFlatbedAngle(), 0.01);
+        assertEquals(10.1, myScania.getRampAngle(), 0.01);
     }
 
     @Test
     public void testLiftFlatbedNotMove(){
         Scania myScania = new Scania();
-        myScania.setFlatbedAngle(0);
+        myScania.setRampAngle(0);
         myScania.setCurrentSpeed(0);
         double x = myScania.getX();
         myScania.liftFlatbed();
@@ -27,7 +27,7 @@ public class testLiftFlatbed {
     @Test
     public void testLiftFlatbedMove(){
         Scania myScania = new Scania();
-        myScania.setFlatbedAngle(0.1);
+        myScania.setRampAngle(0.1);
         myScania.setCurrentSpeed(1);
         myScania.setAngle(0);
         double x = myScania.getX();

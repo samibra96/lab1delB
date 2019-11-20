@@ -1,9 +1,9 @@
 import java.awt.*;
 
-public abstract class Truck extends Vehicle implements Movable, ITransport {
+public abstract class Truck extends Vehicle implements Movable {
 
 
-    private double flatbedAngle;
+    private double rampAngle;
     private int nrDoors;
 
 
@@ -17,9 +17,9 @@ public abstract class Truck extends Vehicle implements Movable, ITransport {
      * @param modelName    The car model name
      * @param angle        The direction the car is pointed towards
      */
-    public Truck(int nrDoors, Color color, double enginePower, double currentSpeed, String modelName, double angle, double flatbedAngle) {
+    public Truck(int nrDoors, Color color, double enginePower, double currentSpeed, String modelName, double angle, double rampAngle) {
         super(enginePower, currentSpeed, color, modelName, angle);
-          this.flatbedAngle = flatbedAngle;
+          this.rampAngle = rampAngle;
           this.nrDoors = nrDoors;
     }
 
@@ -28,32 +28,18 @@ public abstract class Truck extends Vehicle implements Movable, ITransport {
      */
     @Override
     public void move(){
-        if (Double.compare(flatbedAngle,0) == 0){
+        if (Double.compare(rampAngle,0) == 0){
             super.move();
         }
     }
 
-    /**
-     * Loads cargo on truck. TODO use composition to be able to use method on ferry.
-     */
-    @Override
-    public void loadCargo() {
 
+
+    public double getRampAngle() {
+        return rampAngle;
     }
 
-    /**
-     * Loads cargo on truck. TODO use composition to be able to use method on ferry.
-     */
-    @Override
-    public void unloadCargo() {
-    }
-
-
-    public double getFlatbedAngle() {
-        return flatbedAngle;
-    }
-
-    public void setFlatbedAngle(double flatbedAngle) {
-        this.flatbedAngle = flatbedAngle;
+    public void setRampAngle(double rampAngle) {
+        this.rampAngle = rampAngle;
     }
 }

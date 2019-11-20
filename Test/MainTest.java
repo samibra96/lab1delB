@@ -23,6 +23,11 @@ public class MainTest {
             printCar(volvo);
         }
 
+        CarTransport carTransport = new CarTransport();
+        Scania scania = new Scania();
+        carTransport.loadCargo(saab);
+        //carTransport.loadCargo(scania);
+
 
     }
 
