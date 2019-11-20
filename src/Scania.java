@@ -43,7 +43,7 @@ public class Scania extends Truck implements ITransport{
     /**
      * Increases angle of flatbed
      */
-    @Override
+
     public void liftFlatbed() {
         if(Double.compare(getCurrentSpeed(),0) == 0) {
             setFlatbedAngle(Math.min(getFlatbedAngle() + 0.1, 70));
@@ -53,7 +53,7 @@ public class Scania extends Truck implements ITransport{
     /**
      * Decreases angle of flatbed
      */
-    @Override
+
     public void lowerFlatbed() {
         setFlatbedAngle(Math.max(getFlatbedAngle()-0.1 , 0));
     }
