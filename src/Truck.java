@@ -1,9 +1,10 @@
 import java.awt.*;
 
-public abstract class Truck extends Cars implements Movable, ITransport {
+public abstract class Truck extends Vehicle implements Movable, ITransport {
 
 
     private double flatbedAngle;
+    private int nrDoors;
 
 
     /**
@@ -17,8 +18,9 @@ public abstract class Truck extends Cars implements Movable, ITransport {
      * @param angle        The direction the car is pointed towards
      */
     public Truck(int nrDoors, Color color, double enginePower, double currentSpeed, String modelName, double angle, double flatbedAngle) {
-        super(nrDoors, color, enginePower, currentSpeed, modelName, angle);
+        super(enginePower, currentSpeed, color, modelName, angle);
           this.flatbedAngle = flatbedAngle;
+          this.nrDoors = nrDoors;
     }
     @Override
     public void move(){
