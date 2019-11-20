@@ -59,7 +59,7 @@ public abstract class Cars implements Movable {
         angle = angle + Math.PI/16;
     }
 
-    private void setCurrentSpeed(double currentSpeed) {
+    public void setCurrentSpeed(double currentSpeed) {
         this.currentSpeed = currentSpeed;
     }
 
@@ -139,15 +139,15 @@ public abstract class Cars implements Movable {
         return angle;
     }
 
-    private void setX(double x) {
+    public void setX(double x) {
         this.x = x;
     }
 
-    private void setY(double y) {
+    public void setY(double y) {
         this.y = y;
     }
 
-    private void setAngle(double angle) {
+    public void setAngle(double angle) {
         this.angle = angle;
     }
 
