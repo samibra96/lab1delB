@@ -27,8 +27,8 @@ public class Volvo240 extends Cars {
     }
 
     /**
-     * calculates speedFactor for Volvo240 which later is used to increase & decrease speed.
-     * @return a double speedFactor.
+     * calculates speedFactor for Volvo240 which later is used to increase and decrease speed.
+     * @return value to multiply incrementSpeed and decrementSpeed by.
      */
     double speedFactor(){
         return getEnginePower() * 0.01 * trimFactor;

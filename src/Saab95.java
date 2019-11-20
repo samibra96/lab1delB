@@ -44,7 +44,7 @@ public class Saab95 extends Cars {
     /**
      * calculates speedFactor for a Saab95.
      *
-     * @return returns a double speedFactor that are used to increase & decrease speed.
+     * @return value to multiply incrementSpeed and decrementSpeed by.
      */
     double speedFactor() {
         double turbo = 1;
