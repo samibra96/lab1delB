@@ -8,7 +8,7 @@ public abstract class Truck extends Vehicle implements Movable, ITransport {
 
 
     /**
-     * constructor who initializes Car.
+     * constructor who initializes Truck.
      *
      * @param nrDoors      Number of doors on the car
      * @param color        Color of the car
@@ -22,6 +22,10 @@ public abstract class Truck extends Vehicle implements Movable, ITransport {
           this.flatbedAngle = flatbedAngle;
           this.nrDoors = nrDoors;
     }
+
+    /**
+     * Moves Truck in x or y direction.
+     */
     @Override
     public void move(){
         if (Double.compare(flatbedAngle,0) == 0){
@@ -29,14 +33,21 @@ public abstract class Truck extends Vehicle implements Movable, ITransport {
         }
     }
 
+    /**
+     * Loads cargo on truck. TODO use composition to be able to use method on ferry.
+     */
     @Override
     public void loadCargo() {
 
     }
 
+    /**
+     * Loads cargo on truck. TODO use composition to be able to use method on ferry.
+     */
     @Override
     public void unloadCargo() {
     }
+
 
     public double getFlatbedAngle() {
         return flatbedAngle;
