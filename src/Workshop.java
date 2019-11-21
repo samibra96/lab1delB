@@ -18,8 +18,11 @@ public class Workshop <T extends Vehicle> {
         workshopUnits.add(t);
     }
 
-    public void removeFromWorkshop(T t){
+    public void removeFromWorkshop(){
         // TODO
+        workshopUnits.get(0).setX(0);               //Hardcoded out position
+        workshopUnits.get(0).setY(0);               //Hardcoded out position
+
         workshopUnits.remove(0);
     }
 

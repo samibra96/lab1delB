@@ -18,12 +18,26 @@ public class CarTransport extends Truck implements ITransport {
                 if(cargo.size()<8) {
                     car.setX(this.getX());
                     car.setY(this.getY());
-                    car.setCurrentSpeed(0);
+                    car.stopEngine();
                     cargo.push(car);
                 }
             }
         }
     }
+
+    @Override
+    public void move() {
+        super.move();
+        moveAll();
+    }
+
+    public void moveAll(){
+        for(Cars car: cargo){
+            car.setX(this.getX());
+            car.setY(this.getY());
+        }
+    }
+
 
     /**
      * Loads cargo on truck. TODO use composition to be able to use method on ferry.
@@ -33,6 +47,7 @@ public class CarTransport extends Truck implements ITransport {
         if (Double.compare(getRampAngle(),RAMPDOWN) == 0 && cargo.size() != 0){
             cargo.peek().setX(this.getX()+5);
             cargo.peek().setY(this.getY()+5);
+            cargo.peek().startEngine();
             cargo.pop();
         }
     }
