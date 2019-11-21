@@ -37,9 +37,12 @@ public class MainTest {
         workshop.putInWorkshop(volvo);
         System.out.println(workshop.workshopUnits.toString());
 
+        Workshop<Volvo240> volvo240Workshop = new Workshop<>(3);
+        //volvo240Workshop.putInWorkshop(saab);
+        volvo240Workshop.putInWorkshop(volvo);
 
-
-
+        //volvo240Workshop.removeFromWorkshop(volvo);
+        volvo.move();
     }
 
     private void printCar(Cars car){

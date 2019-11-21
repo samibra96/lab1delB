@@ -22,6 +22,8 @@ public abstract class Truck extends Vehicle implements Movable {
         super(enginePower, currentSpeed, color, modelName, angle);
           this.rampAngle = rampAngle;
           this.nrDoors = nrDoors;
+          startEngine();
+
     }
 
     /**
@@ -30,7 +32,7 @@ public abstract class Truck extends Vehicle implements Movable {
     @Override
     public void move(){
         if (Double.compare(rampAngle,0) == 0){
-            move();
+            super.move();
         }
     }
 

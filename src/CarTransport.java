@@ -8,6 +8,7 @@ public class CarTransport extends Truck implements ITransport {
 
     private ArrayDeque<Cars> cargo = new ArrayDeque<>(8);       //TODO Move all in while  if moving CarTransport
 
+
     /**
      * Loads cargo on truck. TODO use composition to be able to use method on ferry.
      */

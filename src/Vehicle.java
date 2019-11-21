@@ -76,7 +76,7 @@ public abstract class Vehicle implements Movable {
     /**
      * starts engine by setting currentSpeed to 0.1
      */
-    protected void startEngine() {
+    public void startEngine() {
         currentSpeed = 0.1;
     }
 
