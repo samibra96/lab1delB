@@ -7,6 +7,7 @@ public class TestLowerFlatbed {
     public void testLowerFlatbed(){
         Scania myScania = new Scania();
         myScania.setRampAngle(10);
+        myScania.stopEngine();
         myScania.lowerFlatbed();
         assertEquals(myScania.getRampAngle(), 9.9, 0.01);
     }

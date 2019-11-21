@@ -4,11 +4,11 @@ public abstract class Vehicle implements Movable {
 
     private Movehelper parent;
 
-    protected double enginePower; // Engine power of the car
-    protected double currentSpeed; // The current speed of the car
-    protected Color color; // Color of the car
-    protected String modelName; // The car model name
-    protected double angle;
+    private double enginePower; // Engine power of the car
+    private double currentSpeed; // The current speed of the car
+    private Color color; // Color of the car
+    private String modelName; // The car model name
+    private double angle;
     private double x;
     private double y;
 

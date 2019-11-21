@@ -26,13 +26,17 @@ public class CarTransport extends Truck implements ITransport {
         }
     }
 
+    /**
+     * Overriden function, moves loaded cars and the CarTransport
+     */
     @Override
     public void move() {
         super.move();
         moveAll();
     }
 
-    public void moveAll(){
+
+    private void moveAll(){
         for(Cars car: cargo){
             car.setX(this.getX());
             car.setY(this.getY());
@@ -53,19 +57,41 @@ public class CarTransport extends Truck implements ITransport {
         }
     }
 
+
+    /**
+     * Construct default Car Transport
+     */
     public CarTransport() {
         this(2, Color.CYAN, 80, 0, "Mercedes Transporter", 0,0);
     }
 
+
+    /**
+     * Create custom Car Transport
+     * @param nrDoors
+     * @param color
+     * @param enginePower
+     * @param currentSpeed
+     * @param modelName
+     * @param angle
+     * @param flatbedAngle
+     */
     public CarTransport(int nrDoors, Color color, double enginePower, double currentSpeed, String modelName, double angle, double flatbedAngle) {
         super(nrDoors, color, enginePower, currentSpeed, modelName, angle, flatbedAngle);
     }
 
+    /**
+     * Rise ramp on the Car Transport
+     */
     public void liftRamp(){     //TODO Combine common method with Scania
         if(Double.compare(getCurrentSpeed(),0) == 0) {
             setRampAngle(RAMPUP);
         }
     }
+
+    /**
+     * Lower ramp on the Car Transport
+     */
     public void lowerRamp(){    //TODO Combine common method with Scania
         if(Double.compare(getCurrentSpeed(),0) == 0) {
             setRampAngle(RAMPDOWN);
