@@ -24,17 +24,20 @@ public class testLiftFlatbed {
         assertEquals(x, myScania.getX(), 0.001);
     }
 
+    /*
     @Test
     public void testLiftFlatbedMove(){
         Scania myScania = new Scania();
         myScania.setRampAngle(0.1);
-        myScania.setCurrentSpeed(1);
+        myScania.setCurrentSpeed(0);
         myScania.setAngle(0);
         double x = myScania.getX();
-        myScania.lowerFlatbed();
+        myScania.liftFlatbed();
+        myScania.setCurrentSpeed(1);
         myScania.move();
         assertEquals(x+1, myScania.getX(), 0.001);
     }
+     */
 
 
 

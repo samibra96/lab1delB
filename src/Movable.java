@@ -8,19 +8,19 @@ public interface Movable {
 
     void turnRight();
 
-    double getX();
-
-    double getY();
-
-    double getCurrentSpeed();
-
-    double getAngle();
-
-    double setX(double x);
-
-    double setY(double y);
-
-    double setAngle(double angle);
-
+    //double getX();
+//
+    //double getY();
+//
+    //double getCurrentSpeed();
+//
+    //double getAngle();
+//
+    //double setX(double x);
+//
+    //double setY(double y);
+//
+    //double setAngle(double angle);
+//
 
 }

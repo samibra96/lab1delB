@@ -30,7 +30,7 @@ public abstract class Truck extends Vehicle implements Movable {
     @Override
     public void move(){
         if (Double.compare(rampAngle,0) == 0){
-            super.move();
+            move();
         }
     }
 

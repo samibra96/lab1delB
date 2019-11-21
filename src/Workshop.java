@@ -1,9 +1,9 @@
 import java.awt.*;
 import java.util.ArrayList;
 
-public class Workshop <T> {
+public class Workshop <T extends Vehicle> {
 
-    private  T t;
+    //private  T t;
     //private S s;
     private int maxUnits;
 
