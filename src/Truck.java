@@ -3,6 +3,7 @@ import java.awt.*;
 public abstract class Truck extends Vehicle implements Movable {
 
 
+
     private double rampAngle;
     private int nrDoors;
 
@@ -32,8 +33,6 @@ public abstract class Truck extends Vehicle implements Movable {
             super.move();
         }
     }
-
-
 
     public double getRampAngle() {
         return rampAngle;

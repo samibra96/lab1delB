@@ -2,7 +2,7 @@ import java.awt.*;
 /**
  * Abstract class that Saab95 and Volvo240 extends
  */
-public abstract class Cars extends Vehicle {
+public abstract class Cars extends Vehicle implements Movable{
 
     /**
      * instance variables for Cars.

@@ -1,6 +1,9 @@
 import java.awt.*;
 
 public abstract class Vehicle implements Movable {
+
+    private Movehelper parent;
+
     protected double enginePower; // Engine power of the car
     protected double currentSpeed; // The current speed of the car
     protected Color color; // Color of the car

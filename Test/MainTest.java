@@ -1,9 +1,11 @@
 import org.junit.Test;
 import java.lang.System.*;
-
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class MainTest {
+
 
     @Test
     public void run(){
@@ -27,6 +29,15 @@ public class MainTest {
         Scania scania = new Scania();
         carTransport.loadCargo(saab);
         //carTransport.loadCargo(scania);
+
+        /**
+         * Just som Erik tests, don't mind!
+         */
+        Workshop<Cars> workshop = new Workshop<>(5);
+        workshop.putInWorkshop(volvo);
+        System.out.println(workshop.workshopUnits.toString());
+
+
 
 
     }

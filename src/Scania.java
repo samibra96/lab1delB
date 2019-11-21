@@ -3,7 +3,7 @@ import java.awt.*;
 /**
  *  Scania is a Truck
  */
-public class Scania extends Truck implements Movable{
+public class Scania extends Truck{
 
     /**
      * instance variable used to calculate speedFactor of a Scania.
