@@ -35,7 +35,15 @@ public class testWorkshop {
          //carsWorkshop.removeFromWorkshop();
     }
 
-    //TODO Brand workshop
+    public void testBrandWorkshop(){
+        Scania myScania = new Scania();
+        Saab95 mySaab = new Saab95();
+        Volvo240 myVolvo = new Volvo240();
+        volvo240Workshop = new Workshop<>(2);
+        volvo240Workshop.putInWorkshop(myVolvo);
+        //volvo240Workshop.putInWorkshop(mySaab);
+        //volvo240Workshop.putInWorkshop(myScania);
+    }
 
 
 
