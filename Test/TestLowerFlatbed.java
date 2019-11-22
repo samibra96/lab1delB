@@ -9,7 +9,7 @@ public class TestLowerFlatbed {
         myScania.setRampAngle(10);
         myScania.stopEngine();
         myScania.lowerFlatbed();
-        assertEquals(myScania.getRampAngle(), 9.9, 0.01);
+        assertEquals(12,myScania.getRampAngle(), 0.01);
     }
 
     @Test

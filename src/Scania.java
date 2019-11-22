@@ -46,7 +46,7 @@ public class Scania extends Truck{
 
     public void liftFlatbed() {     //TODO combine common method with CarTransport
         if(Double.compare(getCurrentSpeed(),0) == 0) {
-            setRampAngle(Math.min(getRampAngle() + 0.1, 70));
+            setRampAngle(Math.min(getRampAngle() - 2, 70));
         }
     }
 
@@ -56,7 +56,7 @@ public class Scania extends Truck{
 
     public void lowerFlatbed() {        //TODO combine common method with CarTransport
         if(Double.compare(getCurrentSpeed(),0) == 0) {
-            setRampAngle((Math.max(getRampAngle() - 0.1, 0)));
+            setRampAngle((Math.max(getRampAngle() + 2, 0)));
         }
     }
 

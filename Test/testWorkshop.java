@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -40,13 +41,13 @@ public class testWorkshop {
         Scania myScania = new Scania();
         Saab95 mySaab = new Saab95();
         Volvo240 myVolvo = new Volvo240();
-        myVolvo = null;
         volvo240Workshop = new Workshop<>(2);
         volvo240Workshop.putInWorkshop(myVolvo);
         //volvo240Workshop.putInWorkshop(mySaab);
         //volvo240Workshop.putInWorkshop(myScania);
         //Saab95 sndSaab = volvo240Workshop.removeFromWorkshop();
         Volvo240 sndVolvo = volvo240Workshop.removeFromWorkshop();
+        assert(sndVolvo!= null);
     }
 
 
