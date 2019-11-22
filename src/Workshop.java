@@ -24,14 +24,14 @@ public class Workshop <T extends Vehicle> {
 
     /**
      * Remove given car from the workshop.
-     * TODO Give reference to removed car.
+     *
      */
-    public void removeFromWorkshop(){
-        // TODO
-        workshopUnits.get(0).setX(0);               //Hardcoded out position
-        workshopUnits.get(0).setY(0);               //Hardcoded out position
-
+    public T removeFromWorkshop(){
+        T vehicle = workshopUnits.get(0);
         workshopUnits.remove(0);
+        vehicle.setX(0);               //Hardcoded out position
+        vehicle.setY(0);               //Hardcoded out position
+        return vehicle;
     }
 
 
